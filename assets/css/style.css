@@ -14,7 +14,7 @@ header {
 #main-content {
     padding: 1rem; 
 }
-
+/* created a square booard 300x300 */
 .game-board {
     width: 300px;
     height: 300px;
@@ -24,3 +24,5 @@ header {
     gap: 10px;
     margin: 0 auto;
 }
+
+
