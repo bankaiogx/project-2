@@ -6,6 +6,11 @@ body {
     background-color: #111;
 }
 
+
 header {
     margin-bottom: 1.5rem;
+}
+
+#main-content {
+    padding: 1rem; 
 }
