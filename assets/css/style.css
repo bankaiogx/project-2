@@ -23,7 +23,8 @@ header {
     grid-template-rows: 1fr 1fr;
     gap: 10px;
     margin: 0 auto;
-}
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);}
 
 /* base style for pads */
 .pad {
@@ -34,7 +35,7 @@ header {
     font-size: 0;
 }
 
-/* smaking board circular and shaping quadrants */
+/* making board circular and shaping quadrants */
 .pad-red {
     background-color: #d64545;
     border-top-left-radius: 100%;
