@@ -33,3 +33,28 @@ header {
     cursor: pointer;
     font-size: 0;
 }
+
+/* smaking board circular and shaping quadrants */
+.pad-red {
+    background-color: #d64545;
+    border-top-left-radius: 100%;
+}
+
+.pad-blue {
+    background-color: #2f6fde;
+    border-top-right-radius: 100%;
+}
+
+.pad-green {
+    background-color: #2ea44f;
+    border-bottom-left-radius: 100%;
+}
+
+.pad-yellow {
+    background-color: #f2c94c;
+    border-bottom-right-radius: 100%;
+}
+.pad:focus {
+    outline: 4px solid #ffffff;
+    outline-offset: -4px;
+}
