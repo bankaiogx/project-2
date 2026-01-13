@@ -69,6 +69,12 @@ header {
     outline-offset: 2px;
 }
 
+.pad.active {
+    filter: brightness(1.4);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+
+}
+
 /* Header and game desciption */
 .intro {
     max-width: 700px;
