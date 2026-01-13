@@ -35,35 +35,55 @@
     </nav>
   </header>
 
-  <main id="main-content">
-    <section>
-      <h2>Play</h2>
-      <p id="message">Click Start to begin.</p>
-      <p><strong>Round:</strong> <span id="round">0</span></p>
-    </section>
+  <main id="main-content" class="container py-4">
+    <div class="row g-4">
+      <div class="col-12 col-md-8">
+        <section class="mb-3">
+          <h2>Play</h2>
+          <p id="message">Click Start to begin.</p>
+          <p><strong>Round:</strong> <span id="round">0</span></p>
+        </section>
 
-    <section aria-label="Game pads">
-      <button class="pad" type="button" data-pad="red">Red</button>
-      <button class="pad" type="button" data-pad="blue">Blue</button>
-      <button class="pad" type="button" data-pad="green">Green</button>
-      <button class="pad" type="button" data-pad="yellow">Yellow</button>
-    </section>
+        <section class="mb-3" aria-label="Game pads">
+          <div class="game-board" aria-label="Game board">
+            <button class="pad pad-red" type="button" data-pad="red">Red</button>
+            <button class="pad pad-blue" type="button" data-pad="blue">Blue</button>
+            <button class="pad pad-green" type="button" data-pad="green">Green</button>
+            <button class="pad pad-yellow" type="button" data-pad="yellow">Yellow</button>
+          </div>
+        </section>
 
-    <section aria-label="Game controls">
-      <button id="startBtn" type="button">Start</button>
-      <button id="restartBtn" type="button">Restart</button>
+        <section aria-label="Game controls">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <button id="startBtn" type="button" class="btn btn-success">Start</button>
+            <button id="restartBtn" type="button" class="btn btn-outline-light">Restart</button>
 
-      <label for="difficulty">Difficulty</label>
-      <select id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium" selected>Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-    </section>
+            <label for="difficulty" class="ms-2">Difficulty</label>
+            <select id="difficulty" class="form-select w-auto">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </section>
+      </div>
+
+      <aside class="col-12 col-md-4" aria-label="Rules">
+        <div class="p-3 border rounded bg-dark text-light">
+          <h3 class="h5">Rules</h3>
+          <ul class="mb-0">
+            <li>Press Start and watch the sequence.</li>
+            <li>Repeat the sequence by clicking the pads.</li>
+            <li>Each round adds one step.</li>
+            <li>One mistake ends the game.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <p>Memory game.</p>
+    <p>Sequence trainer</p>
   </footer>
 
   <script src="assets/js/game.js"></script>
