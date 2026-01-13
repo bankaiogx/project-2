@@ -37,6 +37,7 @@ header {
     font-size: 0;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.12);
     transition: filter 120ms ease, box-shadow 120ms ease;
+    filter: brightness(0.6);
 }
 
 .pad:hover {
