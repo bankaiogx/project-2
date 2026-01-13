@@ -24,7 +24,9 @@ header {
     gap: 10px;
     margin: 0 auto;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);}
+    /* faint outer neon glow */
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.35), 0 0 40px rgba(0, 255, 255, 0.18);
+}
 
 /* base style for pads */
 .pad {
@@ -33,29 +35,35 @@ header {
     border: none;
     cursor: pointer;
     font-size: 0;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.12);
+    transition: filter 120ms ease, box-shadow 120ms ease;
+}
+
+.pad:hover {
+    filter: brightness(1.15);
 }
 
 /* making board circular and shaping quadrants */
 .pad-red {
-    background-color: #d64545;
+    background-color: #ff2bd6;
     border-top-left-radius: 100%;
 }
 
 .pad-blue {
-    background-color: #2f6fde;
+    background-color: #00e5ff;
     border-top-right-radius: 100%;
 }
 
 .pad-green {
-    background-color: #2ea44f;
+    background-color: #39ff14;
     border-bottom-left-radius: 100%;
 }
 
 .pad-yellow {
-    background-color: #f2c94c;
+    background-color: #ffe600;
     border-bottom-right-radius: 100%;
 }
 .pad:focus {
-    outline: 4px solid #ffffff;
-    outline-offset: -4px;
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
 }
