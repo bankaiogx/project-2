@@ -8,21 +8,44 @@
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <h1>Memory Game</h1>
-    <nav>
-      <a href="index.html">Home</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="how-to.html">How To Play</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
   <main id="main-content">
-    <p>Game will go here.</p>
+    <section>
+      <h2>Play</h2>
+      <p id="message">Click Start to begin.</p>
+      <p><strong>Round:</strong> <span id="round">0</span></p>
+    </section>
+
+    <section aria-label="Game pads">
+      <button class="pad" type="button" data-pad="red">Red</button>
+      <button class="pad" type="button" data-pad="blue">Blue</button>
+      <button class="pad" type="button" data-pad="green">Green</button>
+      <button class="pad" type="button" data-pad="yellow">Yellow</button>
+    </section>
+
+    <section aria-label="Game controls">
+      <button id="startBtn" type="button">Start</button>
+      <button id="restartBtn" type="button">Restart</button>
+
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </section>
   </main>
 
-  <footer>
-    <p>memory game</p>
+  <footer class="site-footer">
+    <p>Memory game.</p>
   </footer>
 
   <script src="assets/js/game.js"></script>
