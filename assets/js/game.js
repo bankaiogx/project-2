@@ -1,11 +1,3 @@
-/*
- * Sequence Trainer – Memory Game
- *
- * References:
- * - MDN Web Docs (DOM manipulation, events, timing, accessibility)
- *
- * Note: The code here is written and adapted specifically for this project.
- */
 
 // Game variables
 let sequence = [];
@@ -90,7 +82,6 @@ function handlePadClick(pad) {
   // If the player completed the full sequence, start the next round
   if (playerSequence.length === sequence.length) {
     setMessage("Nice! Next round...");
-    playerSequence = [];
     setPadsEnabled(false);
     setTimeout(() => {
       computerTurn();
@@ -136,7 +127,7 @@ if (restartBtn) {
   });
 }
 
-// Computer turn: add a random pad and play it
+// Computer turn: add a random pad and play the full sequence
 function computerTurn() {
   if (!isGameActive) return;
 
@@ -144,7 +135,10 @@ function computerTurn() {
   setPadsEnabled(false);
   setMessage("Watch the sequence...");
 
-  // Choose a random pad
+  // Reset player input for the new round
+  playerSequence = [];
+
+  // Choose a random pad and add it to the sequence
   const randomPad = pads[Math.floor(Math.random() * pads.length)];
   sequence.push(randomPad);
 
@@ -152,13 +146,19 @@ function computerTurn() {
   round += 1;
   setRound(round);
 
-  // Play the sequence (currently one step)
-  setTimeout(() => {
-    flashPad(randomPad);
-    isComputerPlaying = false;
-    setPadsEnabled(true);
-    setMessage("Your turn");
-  }, 400);
+  // Play back the full sequence
+  sequence.forEach((pad, index) => {
+    setTimeout(() => {
+      flashPad(pad);
+
+      // End of playback: hand control to the player
+      if (index === sequence.length - 1) {
+        isComputerPlaying = false;
+        setPadsEnabled(true);
+        setMessage("Your turn");
+      }
+    }, 600 * (index + 1));
+  });
 }
 
 // Initial UI state
