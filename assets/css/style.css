@@ -14,6 +14,9 @@ header {
 #main-content {
     padding: 1rem; 
 }
+#main-content > * + * {
+    margin-top: 1.5rem;
+}
 /* created a square booard 300x300 */
 .game-board {
     width: 300px;
@@ -44,6 +47,10 @@ header {
     filter: brightness(1.15);
 }
 
+.pad:active {
+    transform: scale(0.98);
+}
+
 /* making board circular and shaping quadrants */
 .pad-red {
     background-color: #ff2bd6;
@@ -64,7 +71,7 @@ header {
     background-color: #ffe600;
     border-bottom-right-radius: 100%;
 }
-.pad:focus {
+.pad:focus-visible {
     outline: 3px solid #ffffff;
     outline-offset: 2px;
 }
@@ -96,6 +103,12 @@ header {
     font-size: 0.95rem;
 }
 
+h1 {
+    color: #00e5ff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 #message {
     background-color: rgba(0, 229, 255, 0.12);
     color: #ffffff;
@@ -104,4 +117,10 @@ header {
     margin-top: 0.5rem;
     display: inline-block;
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pad {
+        transition: none;
+    }
 }
