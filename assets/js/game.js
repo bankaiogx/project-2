@@ -65,5 +65,30 @@ if (startBtn) {
     setRound(round);
     setMessage("Watch the sequence...");
     setPadsEnabled(false);
+    computerTurn();
   });
+}
+
+// Computer turn: add a random pad and play it
+function computerTurn() {
+  if (!isGameActive) return;
+
+  isComputerPlaying = true;
+  setPadsEnabled(false);
+
+  // Choose a random pad
+  const randomPad = pads[Math.floor(Math.random() * pads.length)];
+  sequence.push(randomPad);
+
+  // Update round
+  round += 1;
+  setRound(round);
+
+  // Play the sequence (currently one step)
+  setTimeout(() => {
+    flashPad(randomPad);
+    isComputerPlaying = false;
+    setPadsEnabled(true);
+    setMessage("Your turn");
+  }, 400);
 }
