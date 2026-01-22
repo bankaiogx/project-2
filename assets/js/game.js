@@ -50,3 +50,20 @@ pads.forEach((pad) => {
     flashPad(pad);
   });
 });
+
+// Start button logic
+if (startBtn) {
+  startBtn.addEventListener("click", () => {
+    // Reset game state
+    sequence = [];
+    playerSequence = [];
+    round = 0;
+    isGameActive = true;
+    isComputerPlaying = false;
+
+    // Update UI
+    setRound(round);
+    setMessage("Watch the sequence...");
+    setPadsEnabled(false);
+  });
+}
