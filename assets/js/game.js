@@ -33,3 +33,12 @@ function setPadsEnabled(enabled) {
     pad.setAttribute("aria-disabled", String(!enabled));
   });
 }
+
+// Visual feedback: flash a pad
+function flashPad(pad) {
+  if (!pad) return;
+  pad.classList.add("active");
+  setTimeout(() => {
+    pad.classList.remove("active");
+  }, 300);
+}
