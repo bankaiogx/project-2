@@ -35,12 +35,27 @@ The main goals of this project were:
 
 - Consider accessibility by using semantic HTML and visible focus states.
 
-To meet the assessment criteria by demonstrating JavaScript logic, DOM manipulation and structured organisation.
-
-
+- To meet the assessment criteria by demonstrating JavaScript logic, DOM manipulation and structured organisation.
 
 
 ## Target Audience and User Stories
+
+This application is designed and aimed at casual users who enjoy short logic-based games, as well as users who want to improve memory and concentration skills. It is also suitable for students or individuals who are looking for a lightweigh activity that can be played simply without installation on desktop or mobile devices.
+
+User stories
+
+- As a user, I want to start and restart the game easily so i can play multiple rounds and games.
+
+- As a user, I want to clearly know when it is my turn so i do not make mistakes and i am focusing at the correct time.
+
+- As a user, I want the sequence to change in difficulty as I progress.
+
+- As a user, I want my best score to be saved between sessions.
+
+- As a user, as a keybaord user, i want to navigate and interact with the game without needing a mouse.
+
+- As a user, I want to recieve feedback that is cear when I make a mistake.
+
 
 ## UX and Design Process
 
