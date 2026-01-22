@@ -17,9 +17,9 @@ const difficultyEl = document.getElementById("difficulty");
 // Difficulty timing
 function getStepDelay() {
   const value = difficultyEl ? difficultyEl.value : "medium";
-  if (value === "easy") return 850;
-  if (value === "hard") return 450;
-  return 600; // medium default
+  if (value === "easy") return 1000;
+  if (value === "hard") return 350;
+  return 700; // medium default
 }
 
 // Utility UI helpers
@@ -154,6 +154,7 @@ function computerTurn() {
   setRound(round);
 
   // Play back the full sequence
+  const stepDelay = getStepDelay();
   sequence.forEach((pad, index) => {
     setTimeout(() => {
       flashPad(pad);
@@ -164,7 +165,7 @@ function computerTurn() {
         setPadsEnabled(true);
         setMessage("Your turn");
       }
-    }, getStepDelay() * (index + 1));
+    }, stepDelay * (index + 1));
   });
 }
 
