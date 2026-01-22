@@ -1,4 +1,13 @@
-// game variables 
+/*
+ * Sequence Trainer – Memory Game
+ *
+ * References:
+ * - MDN Web Docs (DOM manipulation, events, timing, accessibility)
+ *
+ * Note: The code here is written and adapted specifically for this project.
+ */
+
+// Game variables
 let sequence = [];
 let playerSequence = [];
 let round = 0;
@@ -43,12 +52,55 @@ function flashPad(pad) {
   }, 300);
 }
 
-// Pad click listeners (basic interaction)
+// Best score (stored locally)
+const BEST_SCORE_KEY = "sequenceTrainerBestScore";
+const savedBest = Number(localStorage.getItem(BEST_SCORE_KEY)) || 0;
+setBest(savedBest);
+
+function updateBestScoreIfNeeded() {
+  const currentBest = Number(localStorage.getItem(BEST_SCORE_KEY)) || 0;
+  if (round > currentBest) {
+    localStorage.setItem(BEST_SCORE_KEY, String(round));
+    setBest(round);
+  }
+}
+
+function gameOver() {
+  updateBestScoreIfNeeded();
+  isGameActive = false;
+  isComputerPlaying = false;
+  setPadsEnabled(false);
+  setMessage("Game over. Press Start to try again.");
+}
+
+function handlePadClick(pad) {
+  if (!isGameActive || isComputerPlaying) return;
+
+  flashPad(pad);
+
+  // Track and check the player's input against the sequence
+  playerSequence.push(pad);
+  const currentIndex = playerSequence.length - 1;
+
+  if (pad !== sequence[currentIndex]) {
+    gameOver();
+    return;
+  }
+
+  // If the player completed the full sequence, start the next round
+  if (playerSequence.length === sequence.length) {
+    setMessage("Nice! Next round...");
+    playerSequence = [];
+    setPadsEnabled(false);
+    setTimeout(() => {
+      computerTurn();
+    }, 700);
+  }
+}
+
+// Pad click listeners
 pads.forEach((pad) => {
-  pad.addEventListener("click", () => {
-    if (!isGameActive || isComputerPlaying) return;
-    flashPad(pad);
-  });
+  pad.addEventListener("click", () => handlePadClick(pad));
 });
 
 // Start button logic
@@ -65,7 +117,22 @@ if (startBtn) {
     setRound(round);
     setMessage("Watch the sequence...");
     setPadsEnabled(false);
+
     computerTurn();
+  });
+}
+
+// Restart button logic (basic reset)
+if (restartBtn) {
+  restartBtn.addEventListener("click", () => {
+    sequence = [];
+    playerSequence = [];
+    round = 0;
+    isGameActive = false;
+    isComputerPlaying = false;
+    setRound(round);
+    setMessage("Click Start to begin.");
+    setPadsEnabled(false);
   });
 }
 
@@ -75,6 +142,7 @@ function computerTurn() {
 
   isComputerPlaying = true;
   setPadsEnabled(false);
+  setMessage("Watch the sequence...");
 
   // Choose a random pad
   const randomPad = pads[Math.floor(Math.random() * pads.length)];
@@ -92,3 +160,6 @@ function computerTurn() {
     setMessage("Your turn");
   }, 400);
 }
+
+// Initial UI state
+setPadsEnabled(false);
