@@ -1,4 +1,3 @@
-
 // Game variables
 let sequence = [];
 let playerSequence = [];
@@ -14,6 +13,14 @@ const messageEl = document.getElementById("message");
 const roundEl = document.getElementById("round");
 const bestScoreEl = document.getElementById("bestScore");
 const difficultyEl = document.getElementById("difficulty");
+
+// Difficulty timing
+function getStepDelay() {
+  const value = difficultyEl ? difficultyEl.value : "medium";
+  if (value === "easy") return 850;
+  if (value === "hard") return 450;
+  return 600; // medium default
+}
 
 // Utility UI helpers
 function setMessage(text) {
@@ -157,7 +164,7 @@ function computerTurn() {
         setPadsEnabled(true);
         setMessage("Your turn");
       }
-    }, 600 * (index + 1));
+    }, getStepDelay() * (index + 1));
   });
 }
 
