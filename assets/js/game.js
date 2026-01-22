@@ -42,3 +42,11 @@ function flashPad(pad) {
     pad.classList.remove("active");
   }, 300);
 }
+
+// Pad click listeners (basic interaction)
+pads.forEach((pad) => {
+  pad.addEventListener("click", () => {
+    if (!isGameActive || isComputerPlaying) return;
+    flashPad(pad);
+  });
+});
