@@ -59,6 +59,12 @@ User stories
 
 ## UX and Design Process
 
+The design process focused on creating a simple yet intuitive interface that would be easy for first-time users to understand without instructions or hints. The game board was designed to be placed centrally to immediate attention to the main interaction area, whilst controls such as Start, Restart and difficulty selection were positioned nearby to reduce unneecessary movement across the screen.
+
+Accessibility was considered throughout development by using semantic HMTL visible focuc states for keyboard navigation, clear colour contrast and readable text sizes. Buttons were designed to be large enough for touch interaction and status messages were added to communicate whether the user should be watching the sequence or entering input.
+
+Responsiveness was achieved using Bootstrap's grid system and flexible layouts so the inteface adapts cleanly to smaller screens and alrger desktop/tablet displays. Design were reviewed, adjusted and refined during development to ensure the application remained usable, visually conistent and aligned with the original design intentions.
+
 ## Features
 
 ## Technologies Used
