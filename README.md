@@ -13,7 +13,7 @@
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Version Control and Development Process](#version-control-and-development-process)
-- [Credits](#credits)
+- [References](#references)
 - [Validation](#validation)
 - [Acknowledgements](#acknowledgements)
 
@@ -64,24 +64,24 @@ The design process focused on creating a simple yet intuitive interface that wou
 
 Responsiveness was achieved using Bootstrap's grid system and flexible layouts so the inteface adapts cleanly to smaller screens and alrger desktop/tablet displays. Design were reviewed, adjusted and refined during development to ensure the application remained usable, visually conistent and aligned with the original design intentions.
 
-Visual Theme and Colour Choices
+### Visual Theme and Colour Choices
 
 A dark background with bright neon style colours was theme of choice to give the game a modern arcade-like feel whilst ensuring that each pad stands out clearly against the UI. High contrast colours were chosen to help players distinguish between pads quickly, which is essential in a memory based game. Glow effects and brightness changes were added to reinforce which pad is active during playback and hover and to provide immediate visual feedback and confirmation when a user interacts with the game board.
 
- Visual Hierarchy and Layout
+ ### Visual Hierarchy and Layout
 
  The game board is positioned centrally on the page so that it naturally draws the users attention. Status messages, round counters and the best score display are placed nearby to ensure players can quickly understand the current state of the game. Controls such as Start, Restart and difficulty selection were positioned nearby to reduce unneecessary movement across the screen. 
 
-Typography
+### Typography
 
 A simple sans-serif font was used throughout the interface to maximise readability on both small and large screens and heading sizes were increased to create a clear information hierarchy whilst body text remained concise to avoid any distraction from the gameplay experience.
 
-Accessibility Considerations
+### Accessibility Considerations
 
 Accessibility was considered throughout development by using semantic HMTL visible focuc states for keyboard navigation, clear colour contrast and readable text sizes. Buttons were designed to be large enough for touch interaction and status messages were added to communicate whether the user should be watching the sequence or entering input.
 
 
-Visual feedback and Interaction Design
+### Visual feedback and Interaction Design
 
 Visual feedback is provided through hover states, active pad highlights and message updates that indicate when computer is playing and when its the users turn to input a sequence. Input is temporarily disabled during a state of playback in order to prevent accidental clicks which supports a more defensive design and reduces any potenital frustaration
 
@@ -111,7 +111,7 @@ Pads are disabled whilst the computer is playing to prevent invalid actions and 
 - 404 Redirect page
 Users who navigate to a non existent URL are redirected back to the main game page
 
-Future Features
+### Future Features
 
 - Sound effects with on/off toggle.
 - Animated transaitions between rounds
@@ -168,7 +168,19 @@ GitHub was used throughout the project to maintain version control and track dev
 Commit messages were written to give conscise and clear desciption of what had changed such as adding new gameplay logic, updating CSS stylesheet etc.. This helped maintain a clear history of development and made it easier to review the progression and evolution of the project over time.
 
 
-## Credits
+## References
+
+- Boostrap
+used for the grid system (row, col-*), flex utilities (d-flex, justify-content-*, align-items-*), spacing classes (mb-*, py-*, gap-*), cards, buttons, and form styling.
+
+- MDN Web Docs
+ referenced for JavaScript syntax, DOM manipulation, event listeners, localStorage, and timing functions such as setTimeout.
+https://developer.mozilla.org/
+
+### Game Concept Inspiration
+
+The gameplay concept is inspired by classic pattern-memory games such as Simon. The layout, styling, and JavaScript logic were implemented specifically for this project.
+
 
 ## Validation
 
