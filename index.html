@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Skip link-->
   <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 
   <main id="main-content" class="container py-4">
+    <!-- error message if JavaScript is disabled -->
     <noscript>
       <div class="alert alert-warning text-center" role="alert">
         This game requires JavaScript to be enabled to work correctly.
@@ -31,6 +33,7 @@
           <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
        <div>
          <h2 id="playHeading" class="h4 mb-1">Play</h2>
+        <!-- Live status updates -->
         <p id="message" class="mb-2" aria-live="polite">Click Start to begin.</p>
       </div>
       <p class="mb-0">
@@ -46,6 +49,7 @@
     <h2 class="visually-hidden">Game Board</h2>
     <div class="card-body">
       <div class="mb-3">
+        <!-- Game pads -->
         <div class="game-board" role="group" aria-label="Game board" aria-describedby="message rulesText">
           <button class="pad pad-red" type="button" data-pad="red" aria-label="Red">Red</button>
           <button class="pad pad-blue" type="button" data-pad="blue" aria-label="Blue">Blue</button>
@@ -54,6 +58,7 @@
         </div>
       </div>
 
+      <!-- Main game controls -->
       <div role="group" aria-label="Game controls" class="d-flex flex-wrap justify-content-center align-items-center gap-3">
         <div class="d-flex gap-2">
           <button id="startBtn" type="button" class="btn btn-success">Start</button>
@@ -76,6 +81,7 @@
       <aside class="col-12 col-md-4" aria-label="Rules">
         <div class="p-3 border rounded bg-dark text-light">
           <h3 class="h5">Rules</h3>
+          <!-- Rules list -->
           <ul id="rulesText" class="mb-0">
             <li>Press Start and watch the sequence.</li>
             <li>Repeat the sequence by clicking the pads.</li>
@@ -91,7 +97,9 @@
     <p>Sequence Trainer</p>
   </footer>
 
+  <!-- JS game logic -->
   <script src="assets/js/game.js"></script>
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
