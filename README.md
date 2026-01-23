@@ -83,7 +83,7 @@ Accessibility was considered throughout development by using semantic HMTL visib
 
 ### Visual feedback and Interaction Design
 
-Visual feedback is provided through hover states, active pad highlights and message updates that indicate when computer is playing and when its the users turn to input a sequence. Input is temporarily disabled during a state of playback in order to prevent accidental clicks which supports a more defensive design and reduces any potenital frustaration
+Visual feedback is provided through hover states, active pad highlights and message updates that indicate when computer is playing and when its the users turn to input a sequence. Input is temporarily disabled during a state of playback in order to prevent accidental clicks which supports a more defensive design and reduces any potential frustaration
 
 ## Features
 
@@ -116,6 +116,18 @@ Users who navigate to a non existent URL are redirected back to the main game pa
 - Sound effects with on/off toggle.
 - Animated transaitions between rounds
 - Online leaderboards
+
+### Wireframes
+
+Initial wireframes were created to plan the layout and structure of three pages before development began. the designs focued on placing the main game board area prominently in the centre of the screen, with the rules section positioned alongside it on larger displays and stacked verticsally on smaller screens.
+
+A navigation bar were included in the early designs to create a consistent and interactive layout across pages, whilst the how to play page was planned with a large central content area to provide tutorials to clearly explain gameplay instructions
+
+During development, the project was simplified into a single page layout to improve usability and reduce unnecessary navigation whilst keeping core elementds such as strong visual hierarchy, entralised gameplay focus and seperated information areas.
+
+These wireframe helped me guide decisions around spacing, component placement, repsonsiveness and accessibility, esnuring final implementations remained as close to original design intentions.
+
+![Wireframe showing planned layout for home and how-to-play pages](assets/images/wireframe.png)
 
 
 ## Technologies Used
@@ -170,8 +182,15 @@ Commit messages were written to give conscise and clear desciption of what had c
 
 ## References
 
-- Boostrap
+### Code and Documentation
+
+- Bootstrap
 used for the grid system (row, col-*), flex utilities (d-flex, justify-content-*, align-items-*), spacing classes (mb-*, py-*, gap-*), cards, buttons, and form styling.
+CDN sources:
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+Documentation:
+https://getbootstrap.com/
 
 - MDN Web Docs
  referenced for JavaScript syntax, DOM manipulation, event listeners, localStorage, and timing functions such as setTimeout.
