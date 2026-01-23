@@ -1,3 +1,8 @@
+/*jslint browser */
+/*global document, localStorage, setTimeout */
+
+
+
 // Game variables
 let sequence = [];
 let playerSequence = [];
@@ -92,7 +97,9 @@ function gameOver() {
 }
 
 function handlePadClick(pad) {
-  if (!isGameActive || isComputerPlaying) return;
+  if (!isGameActive || isComputerPlaying) {
+    return;
+  }
 
   flashPad(pad);
 
@@ -155,7 +162,9 @@ if (restartBtn) {
 
 // Computer turn: add a random pad and play the full sequence
 function computerTurn() {
-  if (!isGameActive) return;
+  if (!isGameActive) {
+    return;
+  }
 
   isComputerPlaying = true;
   setPadsEnabled(false);
