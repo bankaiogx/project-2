@@ -100,6 +100,24 @@ Future Features
 
 ## Technologies Used
 
+- HTML 5
+Used to structure the content of the application and provide semantic markup
+
+- CSS
+Used for styling, layout and vsual effects such as neon game design board.
+
+- Bootstrap
+Used for responsive layout and grid structure to ensure the interface works across different screen sizes.
+
+- JavaScript 
+Used to control the game logic, handle user input, manipulate the DOM, manage timing for sequence playback and store the best score locally.
+
+- Git and GitHub
+Used for version control, tracking development progress and hosting the source code repository.
+
+- GitHub Pages
+Used to deploy the live version of the application
+
 ## Testing
 
 ## Deployment
