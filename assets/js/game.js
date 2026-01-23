@@ -35,15 +35,21 @@ function getStepDelay() {
 
 // Utility UI helpers
 function setMessage(text) {
-  if (messageEl) messageEl.textContent = text;
+  if (messageEl) {
+    messageEl.textContent = text;
+  }
 }
 
 function setRound(value) {
-  if (roundEl) roundEl.textContent = String(value);
+  if (roundEl) {
+    roundEl.textContent = String(value);
+  }
 }
 
 function setBest(value) {
-  if (bestScoreEl) bestScoreEl.textContent = String(value);
+  if (bestScoreEl) {
+    bestScoreEl.textContent = String(value);
+  }
 }
 
 function setPadsEnabled(enabled) {
@@ -55,7 +61,9 @@ function setPadsEnabled(enabled) {
 
 // Visual feedback: flash a pad
 function flashPad(pad) {
-  if (!pad) return;
+  if (!pad) {
+    return;
+  }
   pad.classList.add("active");
   setTimeout(() => {
     pad.classList.remove("active");
