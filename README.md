@@ -15,7 +15,6 @@
 - [Version Control and Development Process](#version-control-and-development-process)
 - [References](#references)
 - [Validation](#validation)
-- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
@@ -267,5 +266,3 @@ The browser console was checked during gameplay and page reloads, and no runtime
 ![JSLint results](assets/images/screenshots/validation-jslint.png)
 
 ![Console output](assets/images/screenshots/validation-js-console.png)
-
-## Acknowledgements
