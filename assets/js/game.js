@@ -16,9 +16,20 @@ const difficultyEl = document.getElementById("difficulty");
 
 // Difficulty timing
 function getStepDelay() {
-  const value = difficultyEl ? difficultyEl.value : "medium";
-  if (value === "easy") return 1000;
-  if (value === "hard") return 350;
+  let value = "medium";
+
+  if (difficultyEl && difficultyEl.value) {
+    value = difficultyEl.value;
+  }
+
+  if (value === "easy") {
+    return 1000;
+  }
+
+  if (value === "hard") {
+    return 350;
+  }
+
   return 700; // medium default
 }
 
