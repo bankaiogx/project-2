@@ -67,6 +67,31 @@ Responsiveness was achieved using Bootstrap's grid system and flexible layouts s
 
 ## Features
 
+- Start and restart controls
+Allows the user to begin a new game or reset the current session at any time with clear feedback displayed on screen.
+
+- Random Sequence Generation
+Each round adds a randomly selected pad to the sequence thus ensuring varied gameplay on every attempt.
+
+- Full Sexquence Playback
+The computer replays the entire sequenece at the start of each round so players can memorise the correct order
+
+- Player Input validation
+Each user input is checked step-by-step against the computer sequence. An incorrect input immediately ends the game and displays a message.
+
+- Diffculty Settings
+Users have the choice between easy, medium and hard, which adjusts the playback speed of the sequence.
+
+- Best Score persistence
+The highest round reached is saved using local storage and restored when page is reloaded.
+
+- Defensive Interaction Handling
+Pads are disabled whilst the computer is playing to prevent invalid actions and accidental inputs.
+
+- 404 Redirect page
+Users who navigate to a non existent URL are redirected back to the main game page
+
+
 ## Technologies Used
 
 ## Testing
