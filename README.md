@@ -91,6 +91,12 @@ Pads are disabled whilst the computer is playing to prevent invalid actions and 
 - 404 Redirect page
 Users who navigate to a non existent URL are redirected back to the main game page
 
+Future Features
+
+- Sound effects with on/off toggle.
+- Animated transaitions between rounds
+- Online leaderboards
+
 
 ## Technologies Used
 
