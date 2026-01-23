@@ -60,8 +60,9 @@ User stories
 
 The design process focused on creating a simple yet intuitive interface that would be easy for first-time users to understand without instructions or hints.  
 
-
 Responsiveness was achieved using Bootstrap's grid system and flexible layouts so the inteface adapts cleanly to smaller screens and alrger desktop/tablet displays. Design were reviewed, adjusted and refined during development to ensure the application remained usable, visually conistent and aligned with the original design intentions.
+
+![Sequence Trainer main screen](assets/images/screenshots/game-interface.png)
 
 ### Visual Theme and Colour Choices
 
@@ -109,6 +110,9 @@ Pads are disabled whilst the computer is playing to prevent invalid actions and 
 
 - 404 Redirect page
 Users who navigate to a non existent URL are redirected back to the main game page
+
+![Sequence Trainer gameplay in progress](assets/images/screenshots/gameplay.png)
+
 
 ### Future Features
 
