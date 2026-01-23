@@ -122,6 +122,25 @@ Used to deploy the live version of the application
 
 ## Deployment
 
+The testing was deployed using GitHub Pages.
+
+The following steps were taken:
+
+1. The project was pushed to a GitHub repository.
+2. In the repository settings, the Pages section was opened from the sidebar.
+3. Deployment was set to Deploy from a branch.
+4. The main branch was selected with the root folder (/) as the source.
+5. The settings were saved and GitHub generated a live URL for the site.
+
+After deployment, the live site was tested to confrim that all functionaility works as intended, including gameplay, dfficulty selection, score persistence and the 404 redirect page.
+
+The repositoru can be cloned to run the project locally using :
+
+git clone https://github.com/bankaiogx/project-2.git
+
+once cloned, the files can be opened in a code editor and the index.html loaded directly in a browser.
+
+
 ## Version Control and Development Process
 
 ## Credits
