@@ -242,4 +242,30 @@ The gameplay concept is inspired by classic pattern-memory games such as Simon. 
 
 ## Validation
 
+
+### HTML Validation
+
+The live site was tested using the W3C HTML Validator (https://validator.w3.org/).
+
+![HTML validation result](assets/images/screenshots/validation-html.png)
+
+### CSS Validation
+
+Stylesheets were validated using the W3C CSS Validator (https://jigsaw.w3.org/css-validator/).
+No errors were found
+
+![CSS validation result](assets/images/screenshots/validation-css.png)
+
+### JavaScript Validation
+
+JavaScript was tested using JSLint and the browser developer console.
+
+JSLint reported several stylistic warnings related to arrow function usage; these were reviewed and do not affect gameplay or functionality.
+
+The browser console was checked during gameplay and page reloads, and no runtime errors from the application code were found.
+
+![JSLint results](assets/images/screenshots/validation-jslint.png)
+
+![Console output](assets/images/screenshots/validation-js-console.png)
+
 ## Acknowledgements
