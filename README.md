@@ -152,6 +152,45 @@ Used to deploy the live version of the application
 
 ## Testing
 
+### Manual Testing
+
+| Test Area | Test Case | Steps | Expected Result | Actual Result |
+|----------|-----------|-------|----------------|-------------|
+| Start Game | Start begins new game | Click **Start** | Round resets and computer plays first sequence | Pass |
+| Sequence Playback | Full sequence plays each round | Complete round 1 correctly, continue to round 2+ | Computer replays full sequence each round | Pass |
+| Player Input | Correct input progresses | Repeat sequence correctly | Next round begins and message updates | Pass |
+| Player Input | Wrong input ends game | Click incorrect pad | Game ends and message displayed | Pass |
+| Defensive Design | Input blocked during playback | Click pads while computer is playing | No input accepted | Pass |
+| Difficulty | Easy slows playback | Set difficulty to Easy, click Start | Playback is slower | Pass |
+| Difficulty | Hard speeds playback | Set difficulty to Hard, click Start | Playback is faster | Pass |
+| Restart | Restart resets state | Click Restart | Round resets and pads disabled | Pass |
+| Best Score | Best score updates | Beat previous best | Best score changes | Pass |
+| Persistence | Best score persists | Refresh page after new best | Best score remains | Pass |
+| Responsiveness | Layout adapts to screen | Resize browser window | Layout adjusts cleanly | Pass |
+| Keyboard Access | Keyboard usable | Tab + Enter/Space | Controls activate correctly | Pass |
+| 404 Redirect | Invalid URL redirects | Visit non-existent page | Redirects to home | Pass |
+| JavaScript Disabled | Noscript message shown | Disable JS | Warning message appears | Pass |
+
+
+### User Story Verification
+
+| User Story | Evidence |
+|-----------|---------|
+| Start and restart easily | Start and Restart buttons reset and begin games |
+| Know when it is my turn | Status message updates clearly |
+| Difficulty increases | Sequence length increases each round |
+| Difficulty control | Speed changes with difficulty selector |
+| Best score saved | Score persists after refresh |
+| Keyboard access | Focus states and Enter/Space work |
+| Feedback on mistakes | Game over message shown |
+
+### Bugs and Fixes
+
+| Issue | Fix | Result |
+|------|-----|-------|
+| Difficulty speed unclear | Increased playback delay values | Clearly different speeds |
+| Input during playback | Disabled pads during playback | Prevented invalid actions |
+
 ## Deployment
 
 The testing was deployed using GitHub Pages.
