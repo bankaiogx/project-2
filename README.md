@@ -59,11 +59,31 @@ User stories
 
 ## UX and Design Process
 
-The design process focused on creating a simple yet intuitive interface that would be easy for first-time users to understand without instructions or hints. The game board was designed to be placed centrally to immediate attention to the main interaction area, whilst controls such as Start, Restart and difficulty selection were positioned nearby to reduce unneecessary movement across the screen.
+The design process focused on creating a simple yet intuitive interface that would be easy for first-time users to understand without instructions or hints.  
+
+
+Responsiveness was achieved using Bootstrap's grid system and flexible layouts so the inteface adapts cleanly to smaller screens and alrger desktop/tablet displays. Design were reviewed, adjusted and refined during development to ensure the application remained usable, visually conistent and aligned with the original design intentions.
+
+Visual Theme and Colour Choices
+
+A dark background with bright neon style colours was theme of choice to give the game a modern arcade-like feel whilst ensuring that each pad stands out clearly against the UI. High contrast colours were chosen to help players distinguish between pads quickly, which is essential in a memory based game. Glow effects and brightness changes were added to reinforce which pad is active during playback and hover and to provide immediate visual feedback and confirmation when a user interacts with the game board.
+
+ Visual Hierarchy and Layout
+
+ The game board is positioned centrally on the page so that it naturally draws the users attention. Status messages, round counters and the best score display are placed nearby to ensure players can quickly understand the current state of the game. Controls such as Start, Restart and difficulty selection were positioned nearby to reduce unneecessary movement across the screen. 
+
+Typography
+
+A simple sans-serif font was used throughout the interface to maximise readability on both small and large screens and heading sizes were increased to create a clear information hierarchy whilst body text remained concise to avoid any distraction from the gameplay experience.
+
+Accessibility Considerations
 
 Accessibility was considered throughout development by using semantic HMTL visible focuc states for keyboard navigation, clear colour contrast and readable text sizes. Buttons were designed to be large enough for touch interaction and status messages were added to communicate whether the user should be watching the sequence or entering input.
 
-Responsiveness was achieved using Bootstrap's grid system and flexible layouts so the inteface adapts cleanly to smaller screens and alrger desktop/tablet displays. Design were reviewed, adjusted and refined during development to ensure the application remained usable, visually conistent and aligned with the original design intentions.
+
+Visual feedback and Interaction Design
+
+Visual feedback is provided through hover states, active pad highlights and message updates that indicate when computer is playing and when its the users turn to input a sequence. Input is temporarily disabled during a state of playback in order to prevent accidental clicks which supports a more defensive design and reduces any potenital frustaration
 
 ## Features
 
@@ -142,6 +162,11 @@ once cloned, the files can be opened in a code editor and the index.html loaded 
 
 
 ## Version Control and Development Process
+
+GitHub was used throughout the project to maintain version control and track development. A repository was set up at the start of the development and changes were made and committed frequently.
+
+Commit messages were written to give conscise and clear desciption of what had changed such as adding new gameplay logic, updating CSS stylesheet etc.. This helped maintain a clear history of development and made it easier to review the progression and evolution of the project over time.
+
 
 ## Credits
 
