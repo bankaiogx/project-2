@@ -244,7 +244,8 @@ The gameplay concept is inspired by classic pattern-memory games such as Simon. 
 
 ### HTML Validation
 
-The live site was tested using the W3C HTML Validator (https://validator.w3.org/).
+The live site was tested using the W3C HTML Validator (https://validator.w3.org/). After resolving ARIA labelling and section heading warnings, the page now returns no errors or warnings.
+
 
 ![HTML validation result](assets/images/screenshots/validation-html.png)
 
