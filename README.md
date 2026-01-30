@@ -208,12 +208,25 @@ The following steps were taken:
 
 After deployment, the live site was tested to confirm that all functionality works as intended, including gameplay, difficulty selection, score persistence and the 404 redirect page.
 
-The repository can be cloned to run the project locally using :
+To run this project locally, I cloned the repository from GitHub using HTTPS:
 
+I opened the project repository on GitHub:
+https://github.com/bankaiogx/project-2.git
+
+On the repository page, I clicked the green Code button.
+
+In the dropdown, I ensured HTTPS was selected, then I clicked the copy icon next to the URL.
+
+I opened Terminal (Mac)
+
+I navigated to the folder where I wanted the project to download, for example: cd desktop
+
+I ran the clone command using the copied URL:
 git clone https://github.com/bankaiogx/project-2.git
 
-once cloned, the files can be opened in a code editor and the index.html loaded directly in a browser.
+After cloning completed, I opened the new project folder in VS Code.
 
+To run the project, I opened index.html in a browser.
 
 ## Version Control and Development Process
 
