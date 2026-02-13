@@ -2,6 +2,7 @@
 /*global document, localStorage, setTimeout */
 
 
+// DOM methods and localStorage usage referenced from MDN Web Docs
 
 // Game variables
 let sequence = [];

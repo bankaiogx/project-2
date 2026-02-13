@@ -155,6 +155,14 @@ Used to deploy the live version of the application
 
 ## Testing
 
+### Testing Approach
+
+Testing for this project was primarily carried out through manual testing. Manual testing involves directly interacting with the application to check that features behave as intended, user feedback is clear, and the interface remains usable across different screen sizes and devices.
+
+Manual testing was chosen because this project focuses heavily on interaction and visual feedback (for example sequence playback, pad activation, status messages, and difficulty speed changes). These behaviours are best verified by using the application as an end user and checking that the experience matches the expected outcome.
+
+Automated testing uses scripts or testing frameworks to automatically run tests and check behaviour repeatedly. Automated testing is commonly used in larger or more complex projects where frequent changes are made and regression testing is required. Due to the smaller scale of this project and the emphasis on interactive UI behaviour, automated testing was not implemented.
+
 ### Manual Testing
 
 | Test Area | Test Case | Steps | Expected Result | Actual Result |
@@ -196,7 +204,7 @@ Used to deploy the live version of the application
 
 ## Deployment
 
-The testing was deployed using GitHub Pages.
+The site was deployed using GitHub Pages.
 
 The following steps were taken:
 
@@ -253,7 +261,12 @@ https://developer.mozilla.org/
 
 ### Game Concept Inspiration
 
-The gameplay concept is inspired by classic pattern-memory games such as Simon. The layout, styling, and JavaScript logic were implemented specifically for this project.
+The gameplay concept is inspired by classic pattern-memory games such as Simon. During development, a DEV Community guide by Dumebi Okolo was used as general guidance for understanding sequence-based memory game logic. The layout, styling, and JavaScript implementation were developed specifically for this project.
+
+https://dev.to/dumebii/build-a-simple-web-game-in-10-steps-1jb8
+
+Web Dev Cody – Live Coding a Simon Game (YouTube tutorial). Used as general guidance for understanding Simon-style game flow and sequence logic.
+https://www.youtube.com/watch?v=sFQVllUoQW8
 
 
 ## Validation
